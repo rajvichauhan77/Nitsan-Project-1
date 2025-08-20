@@ -1,0 +1,98 @@
+
+.nav-hover:hover {
+    background-color: rgba(255, 166, 0, 0.546);
+    border-radius: 5px;
+    transition: 0.5s ease-in-out;
+}
+
+
+.hcolor{
+    color:#113F67;
+}
+
+.bg-img{
+    background-image: url("Images/img-2.avif");
+    background-size: cover ;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.btm-border{
+    border-bottom: 3px solid orange;
+    display: inline-block;
+    padding: 5px;
+    
+}
+
+.link-border{
+    border-bottom: 3px solid red;
+    display: inline-block;
+}
+
+.link-border:hover {
+    border-bottom-color: orange;
+    color: black;
+}
+
+.dot-org{
+    color: orange;
+}
+
+.btn-anim {
+  position: relative;
+  overflow: hidden;
+  color: white;
+  border-radius: 0.50rem;      
+  transition: color 0.3s ease-in-out;
+   z-index: 1;
+}
+
+
+.btn-anim::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0%;            
+  width: 100%;
+  background-color: rgba(224, 173, 173, 0.783);
+  z-index: -1;         
+  transition:  0.4s ease-in-out;
+  border-radius: 0.50rem;
+}
+
+.btn-anim:hover::before {
+  height: 100%;         
+  color: white;
+}
+
+.btn-anim1{
+    position: relative;
+    overflow: hidden;  
+    color: red;
+    border: 1px solid red;
+    border-radius: 0.50rem;
+    z-index: 1;      
+    transition: color 0.3s ease-in-out;
+}
+
+.btn-anim1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0%;            
+  width: 100%;
+  background-color:rgba(227, 8, 8, 0.772);
+  z-index: -1;         
+  transition:  0.4s ease-in-out;
+  border-radius: 0.50rem;
+  color: white;
+}
+
+.btn-anim1:hover::before {
+    color: white; 
+    height: 100%;         
+  
+}
