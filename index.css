@@ -11,6 +11,12 @@
     color:#113F67;
 }
 
+.logo{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+
 .bg-img{
     background-image: url("Images/img-2.avif");
     background-size: cover ;
@@ -191,5 +197,24 @@
   opacity: 1 ;
 }
 
+.bg-img2{
+    background-image: url("Images/bg-img2.jpg");
+    background-size: cover ;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.input-width{
+    max-width: 350px;
+}
+
+.btm-border2{
+    display: inline-block;
+}
+
+html, body {
+  overflow-x: hidden;
+}
 
 
