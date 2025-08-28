@@ -1,8 +1,6 @@
 
 .nav-hover:hover {
     background-color:rgba(250, 34, 34, 0.737);
-    border-radius: 5px;
-    color: white;
     transition: 0.6s ease-in-out;
 }
 
@@ -12,10 +10,21 @@
 }
 
 .logo{
-    height: 30px;
-    width: 30px;
+    height: 50px;
+    width: 50px;
     border-radius: 50%;
+   
 }
+
+.navbar-nav {
+    gap: 1rem; /* smaller gap between links */
+}
+
+.nav-icons {
+    gap: 0.5rem; /* smaller gap between icons */
+}
+
+
 
 .bg-img{
     background-image: url("Images/img-2.avif");
@@ -150,7 +159,6 @@
 }
 
 
-
 .hexagon{
     width: 200px;
     height: 200px;
@@ -177,6 +185,7 @@
     width: 100%;
 
 }
+
 .college-img2{
     height: 300px;
     width: 100%;
