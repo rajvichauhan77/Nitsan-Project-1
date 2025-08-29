@@ -2,27 +2,58 @@
 .nav-hover:hover {
     background-color:rgba(250, 34, 34, 0.737);
     transition: 0.6s ease-in-out;
+    color: white !important;
 }
 
 
 .hcolor{
     color:#113F67;
-}
+} 
 
 .logo{
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
+  height: 40px;         
+  width: 40px;
+  border-radius: 50%;
    
 }
 
 .navbar-nav {
-    gap: 1rem; /* smaller gap between links */
+  gap: 15px; 
+  border: 1px solid red;
 }
 
-.nav-icons {
-    gap: 0.5rem; /* smaller gap between icons */
+
+@media (max-width: 991px){
+  .navbar-collapse {
+    background: white;
+    position: static;
+    top: 100%;
+    left: 0;
+    width: 100% ;
+    padding: 1px;
+    z-index: 1000;
+    
+  }
+   .navbar-collapse .nav-item {
+    margin: 2px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #eee;
+    padding:5px 1px;
+  }
+ 
+ .navbar-collapse .nav-item::after {
+    content: "→" ;
+    color: white;
+    background: #f44336;
+    padding: 5px 10px;
+    border-radius: 4px;
+  }
+
 }
+
+
 
 
 
