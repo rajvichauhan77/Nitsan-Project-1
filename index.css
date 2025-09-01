@@ -19,12 +19,25 @@
 
 .navbar-nav {
   gap: 15px; 
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
+.navbar-collapse .navbar-nav .nav-item .nav-link {
+  width: auto;
+  display: inline-block !important;
+}
+@media (min-width: 992px) {
+  .navbar-collapse { 
+    flex-grow: 0;         
+  }
+  .navbar-actions { 
+    margin-left: .5rem;     
+  }
+}
 
 @media (max-width: 991px){
-  .navbar-collapse {
+  /* .navbar-collapse {
+    flex-grow: 0;
     background: white;
     position: static;
     top: 100%;
@@ -33,7 +46,7 @@
     padding: 1px;
     z-index: 1000;
     
-  }
+  } */
    .navbar-collapse .nav-item {
     margin: 2px;
     display: flex;
@@ -52,6 +65,54 @@
   }
 
 }
+
+
+.navbar {
+    position: relative;
+    z-index: 1;
+}
+
+
+.mega-menu {
+    display: none;             
+    /* position: absolute;*/
+    top: 10%;                 
+    left: 0;
+    width: 100%;               
+    background-color: gainsboro;
+    padding: 20px 50px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;          
+    z-index: 1000;
+}
+
+
+
+.nav-item .nav-link:hover + .mega-menu{
+    /* display: block; */
+    position: absolute;
+    background-color: aliceblue;
+     
+}
+
+.mega-menu-bg-img{
+  background-image: url("Images/mega-menu-img.jpg");
+  background-size: cover ;
+  background-position: center;
+}
+
+.mega-menu-col-bg-img{
+  background-image: url("Images/bg-nav-img-1.avif");
+  background-size: cover ;
+  background-position: center;
+}
+
+
+
+
+
+
+
 
 
 
