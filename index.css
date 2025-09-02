@@ -1,4 +1,7 @@
-
+*{
+  padding: 0;
+  margin: 0;
+}
 .nav-hover:hover {
     background-color:rgba(250, 34, 34, 0.737);
     transition: 0.6s ease-in-out;
@@ -19,7 +22,6 @@
 
 .navbar-nav {
   gap: 15px; 
-  /* border: 1px solid red; */
 }
 
 .navbar-collapse .navbar-nav .nav-item .nav-link {
@@ -54,6 +56,7 @@
     align-items: center;
     border: 1px solid #eee;
     padding:5px 1px;
+    
   }
  
  .navbar-collapse .nav-item::after {
@@ -75,8 +78,8 @@
 
 .mega-menu {
     display: none;             
-    /* position: absolute;*/
-    top: 10%;                 
+    position: absolute;
+    top: 8%;                 
     left: 0;
     width: 100%;               
     background-color: gainsboro;
@@ -84,22 +87,25 @@
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     overflow: hidden;          
     z-index: 1000;
+    background-image: url("Images/mega-menu-img.jpg");
+    background-size: cover ;
+    background-position: center;
 }
 
 
 
 .nav-item .nav-link:hover + .mega-menu{
-    /* display: block; */
+    display: block;
     position: absolute;
-    background-color: aliceblue;
+  
      
 }
 
-.mega-menu-bg-img{
+/* .mega-menu-bg-img{
   background-image: url("Images/mega-menu-img.jpg");
   background-size: cover ;
   background-position: center;
-}
+} */
 
 .mega-menu-col-bg-img{
   background-image: url("Images/bg-nav-img-1.avif");
@@ -140,7 +146,9 @@
   border-bottom-color: #2252e1; /* show underline on hover */
 }
 
-
+.img-section{
+  /* position: absolute; */
+}
 
 
 
