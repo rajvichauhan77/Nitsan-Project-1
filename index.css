@@ -107,7 +107,38 @@
   background-position: center;
 }
 
+.mega-menu-link{
+  position: relative;
+  display: inline-block;    
+  text-decoration: none;    
+ 
+}
 
+.mega-menu-link::after{
+  content: "";
+  position: absolute;
+  left: 0;                 
+  bottom: 0;
+  height: 3px;
+  width: 0;                 
+  background: #f44336;
+  transition: width .25s ease;
+ 
+}
+
+.mega-menu-link:hover::after{
+  width: 30px;       
+}
+
+.mega-menu-link-2 {
+  display: inline-block; /* keeps underline only under text */
+  border-bottom: 3px solid transparent; /* invisible line (keeps height stable) */
+  transition: border-color 0.3s ease;
+}
+
+.mega-menu-link-2:hover {
+  border-bottom-color: #2252e1; /* show underline on hover */
+}
 
 
 
