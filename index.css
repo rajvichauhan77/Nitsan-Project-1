@@ -137,20 +137,25 @@
 }
 
 .mega-menu-link-2 {
-  display: inline-block; /* keeps underline only under text */
-  border-bottom: 3px solid transparent; /* invisible line (keeps height stable) */
+  display: inline-block; 
+  border-bottom: 3px solid transparent; 
   transition: border-color 0.3s ease;
 }
 
 .mega-menu-link-2:hover {
-  border-bottom-color: #2252e1; /* show underline on hover */
+  border-bottom-color: #2252e1; 
 }
 
-.img-section{
-  /* position: absolute; */
+.img-section-content-1{
+  line-height: 49px;
+  white-space: pre-line;
+  font-size: 49px;
 }
 
-
+.img-section-content{
+  line-height: 2px;
+  font-size: large;
+}
 
 
 
@@ -190,7 +195,7 @@
   position: relative;
   overflow: hidden;
   color: white;
-  border-radius: 0.50rem;      
+  border-radius: 0px !important;      
   transition: color 0.3s ease-in-out;
    z-index: 1;
 }
