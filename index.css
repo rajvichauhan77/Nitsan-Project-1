@@ -28,7 +28,7 @@
   width: auto;
   display: inline-block !important;
 }
-@media (min-width: 992px) {
+@media (min-width: 991px) {
   .navbar-collapse { 
     flex-grow: 0;         
   }
@@ -101,11 +101,6 @@
      
 }
 
-/* .mega-menu-bg-img{
-  background-image: url("Images/mega-menu-img.jpg");
-  background-size: cover ;
-  background-position: center;
-} */
 
 .mega-menu-col-bg-img{
   background-image: url("Images/bg-nav-img-1.avif");
@@ -156,6 +151,31 @@
   line-height: 2px;
   font-size: large;
 }
+
+
+
+
+
+  .mySwiper {
+    max-width: 1200px;   
+    margin: 0 auto;     
+  }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+
+   .swiper-pagination {
+  position: static !important; 
+  margin-top: 10px !important; 
+  text-align: center;
+}
+
 
 
 
