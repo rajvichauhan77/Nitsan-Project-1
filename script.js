@@ -1,41 +1,64 @@
-const navLinks = document.querySelectorAll('[data-menu]'); 
+const navLinks = document.querySelectorAll('[data-menu]');
 const megaMenu = document.getElementById('megaMenu');
+let isMobile = window.matchMedia('(max-width: 991px)').matches;
 
-navLinks.forEach(link => {
-  link.addEventListener('mouseenter', () => {
-    megaMenu.style.display = 'block';
-  });
+if (isMobile) {
+    navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const isMenuOpen = megaMenu.style.display === 'block';
+            megaMenu.style.display = isMenuOpen ? 'none' : 'block';
+        });
+    });
 
-  link.addEventListener('mouseleave', () => {
-    setTimeout(() => {
-      if (!megaMenu.matches(':hover')) {
+    document.addEventListener('click', (e) => {
+        if (!megaMenu.contains(e.target) && !e.target.closest('[data-menu]')) {
+            megaMenu.style.display = 'none';
+        }
+    });
+
+} else {
+    let hideTimeout;
+
+    navLinks.forEach(link => {
+        link.addEventListener('mouseenter', () => {
+            clearTimeout(hideTimeout);
+            megaMenu.style.display = 'block';
+        });
+
+        link.addEventListener('mouseleave', () => {
+            hideTimeout = setTimeout(() => {
+                if (!megaMenu.matches(':hover')) {
+                    megaMenu.style.display = 'none';
+                }
+            }, 100)
+        });
+    });
+
+    megaMenu.addEventListener('mouseenter', () => {
+        clearTimeout(hideTimeout);
+        megaMenu.style.display = 'block';
+    });
+
+    megaMenu.addEventListener('mouseleave', () => {
         megaMenu.style.display = 'none';
-      }
-    }, 100);
-  });
-});
-
-
-megaMenu.addEventListener('mouseleave', () => {
-  megaMenu.style.display = 'none';
-});
-
-
+    });
+}
 
 
 var swiper = new Swiper(".mySwiper", {
-  slidesPerView: 1,  
+  slidesPerView: 1,
   spaceBetween: 20,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
   },
   breakpoints: {
-    768: {   
+    768: {
       slidesPerView: 2,
       spaceBetween: 20,
     },
-    992: {   
+    992: {
       slidesPerView: 3,
       spaceBetween: 30,
     }
