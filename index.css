@@ -261,31 +261,118 @@
   display: inline-block;
   margin-right: 10px;
   clip-path: polygon(
-    25% 0%, 75% 0%,   /* top */
-    100% 50%,         /* right middle */
-    75% 100%, 25% 100%, /* bottom */
-    0% 50%            /* left middle */
+    25% 0%, 75% 0%,   
+    100% 50%,         
+    75% 100%, 25% 100%, 
+    0% 50%            
   );
 }
 
 
-.text-media-p{
-  line-height: 50px;
-  white-space: pre-line;
+.text-media-p {
   font-size: 55px;
   font-weight: 500;
   margin-bottom: 0;
   border-bottom: 3px solid orange;
   width: fit-content;
-  
+  line-height: 1.1;     
+  padding-bottom: 25px;  
 }
 
-.text-media-p2{
-  line-height: 2px;
+@media (max-width: 768px){
+  .text-media-p {
+    font-size: 30px;
+  }
+}
+
+.text-media-p2 {
+  display: block;       
   font-size: 19px;
   font-weight: 400;
-  
+  line-height: 1.2;
+  margin-top: 50px;
+  margin-bottom: 5px;   
 }
+
+.bg-color{
+    background-color: #113046;
+}
+
+
+.img-position {
+    position: relative;  
+    top: 0;
+    right: 0;
+    padding-left: 20px;
+}
+
+.img-style {
+    max-width: 100%;  
+    height: auto;    
+}
+
+
+@media (min-width: 992px) {
+    .img-position {
+        position: absolute;
+        top: 90px;
+        right: 100px;
+    }
+
+    .img-style {
+        height: 470px;
+        width: 460px;
+    }
+}
+
+@media (max-width: 991px) {
+    .img-position {
+        position: relative;
+        top: 0;
+        right: 0;
+        padding-left: 0;
+    }
+
+    .img-style {
+        max-width: 100%;
+        height: 300px;
+    }
+}
+
+
+@media (max-width: 768px) {
+  .img-position {
+    position: static; 
+    margin-top: 0;
+    text-align: center;
+  }
+  .img-style {
+    width: 100%;
+    height: 300px;
+  }
+}
+
+
+.text-teaser-bgcolor{
+    background-color: #0B1D51;
+}
+
+
+.text-teaser-p{
+  font-size: 55px;
+}
+
+.text-teaser-p2{
+  white-space: pre-line;
+}
+
+@media (max-width: 768px){
+  .text-teaser-p{
+    font-size: 45px;
+  }
+}
+
+
 
 
 
@@ -316,9 +403,6 @@
     color: black;
 }
 
-.dot-org{
-    color: orange;
-}
 
 .btn-anim {
   position: relative;
@@ -378,38 +462,7 @@
   
 }
 
-.bg-color{
-    background-color: #113046;
-}
 
-.img-position{
-    position: absolute;
-    top: 130px;
-    right: 100px;
-    /* left: 0; */
-    
-}
-
-.img-style{
-    height: 310px;
-    width: 260px;
-}
-
-@media (max-width: 768px) {
-  .img-position {
-    position: static; 
-    margin-top: 0;
-    text-align: center;
-  }
-  .img-style {
-    width: 100%;
-    height: 300px;
-  }
-}
-
-.typo-bgcolor{
-    background-color: #0B1D51;
-}
 
 .top-border{
     border-top: 3px solid orange;
