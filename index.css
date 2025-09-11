@@ -203,16 +203,16 @@
     margin: 0 auto;     
   }
 
-    .swiper-slide {
-      text-align: center;
-      font-size: 18px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+ .swiper-slide {
+    /* text-align: center; */
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     }
 
 
-   .swiper-pagination {
+.swiper-pagination {
   position: static !important; 
   margin-top: 10px !important; 
   text-align: center;
@@ -371,6 +371,36 @@
     font-size: 45px;
   }
 }
+
+.card{
+  /* width: 380px; */
+  border-radius: 0%;
+  border: none;
+  padding: 0;
+}
+
+.card-img{
+  width: 100%;
+  height: 290px;
+  border-radius: 0%;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.card-body p{
+  margin-bottom: 0;
+}
+
+.card-body h5{
+  line-height: normal;
+}
+
+.card-link{
+  margin-top: 300px;
+  
+}
+
+
 
 
 
