@@ -64,3 +64,29 @@ var swiper = new Swiper(".mySwiper", {
     }
   }
 });
+
+
+
+
+// var elem = document.querySelector('.grid');
+//   var iso = new Isotope(elem, {
+//     itemSelector: '.grid-item',
+//     layoutMode: 'masonry',
+//     masonry: {
+//       gutter: 10
+//     }
+//   });
+
+
+//  var iso = new Isotope('.grid', {
+//     itemSelector: '.grid-item',
+//     layoutMode: 'fitRows' 
+//   });
+
+  // Example filter buttons
+//   document.querySelectorAll('.filter-btn').forEach(button => {
+//     button.addEventListener('click', function() {
+//       let filterValue = this.getAttribute('data-filter');
+//       iso.arrange({ filter: filterValue });
+//     });
+//   });
