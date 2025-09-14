@@ -67,26 +67,39 @@ var swiper = new Swiper(".mySwiper", {
 
 
 
-
-// var elem = document.querySelector('.grid');
-//   var iso = new Isotope(elem, {
-//     itemSelector: '.grid-item',
-//     layoutMode: 'masonry',
-//     masonry: {
-//       gutter: 10
-//     }
-//   });
-
-
 //  var iso = new Isotope('.grid', {
 //     itemSelector: '.grid-item',
 //     layoutMode: 'fitRows' 
 //   });
 
-  // Example filter buttons
+
 //   document.querySelectorAll('.filter-btn').forEach(button => {
 //     button.addEventListener('click', function() {
 //       let filterValue = this.getAttribute('data-filter');
 //       iso.arrange({ filter: filterValue });
 //     });
 //   });
+
+
+const filterButtons = document.querySelectorAll('.btn-group .btn');
+  const gridItems = document.querySelectorAll('.grid-item');
+
+  filterButtons.forEach(button => {
+    button.addEventListener('click', function () {
+      
+      filterButtons.forEach(btn => btn.classList.remove('active'));
+      this.classList.add('active');
+
+      let filterValue = this.textContent.toLowerCase().replace(/\s+/g, '');
+
+      gridItems.forEach(item => {
+        let category = item.querySelector('p').textContent.toLowerCase().replace(/\s+/g, '');
+
+        if (filterValue === 'all' || category.includes(filterValue)) {
+          item.style.display = "block"; 
+        } else {
+          item.style.display = "none";
+        }
+      });
+    });
+  });
