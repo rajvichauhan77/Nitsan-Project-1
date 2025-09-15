@@ -574,7 +574,7 @@
     
 }
 
-.link-border{
+/* .link-border{
     border-bottom: 3px solid red;
     display: inline-block;
 }
@@ -582,7 +582,7 @@
 .link-border:hover {
     border-bottom-color: orange;
     color: black;
-}
+} */
 
 
 .btn-anim {
@@ -664,10 +664,6 @@
     max-width: 350px;
 }
 
-/* .btm-border2{
-    display: inline-block;
-} */
-
 html, body {
   overflow-x: hidden;
 }
@@ -699,4 +695,133 @@ html, body {
   white-space: pre-line;
 }
 
+.price-table-header {
+  padding: 10px 20px 20px 20px;
+}
 
+
+.price-table-header p{
+    font-size: 20px;
+    padding-top: 20px;
+    padding-bottom: 0;
+    line-height: 5px;
+}
+
+.price-table-header p + p{
+    font-size: 40px;
+    padding-top: 0;
+    line-height: 40px;
+    white-space: pre-line;
+}
+
+.price-table-body{
+  padding: 20px;
+  font-size: 18px;
+  flex-grow: 1;
+}
+.price-border-top{
+  border-top: 3px solid red;
+  width: inline-block; 
+  padding-top: 5px;
+}
+
+.price-border-bottom{
+  border-bottom: 3px solid red;
+  width: inline-block; 
+  padding-top: 5px;
+}
+
+
+.price-list {
+  list-style: none;  
+  padding: 0;
+  margin: 0;
+}
+
+.price-list li {
+  position: relative;
+  padding-left: 30px; 
+  margin-bottom: 10px;
+}
+
+
+.price-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 15px;          
+  height: 15px;
+  background: red;
+  display: inline-block;
+  margin-right: 10px;
+  clip-path: polygon(
+    25% 0%, 75% 0%,   
+    100% 50%,         
+    75% 100%, 25% 100%, 
+    0% 50%            
+  );
+}
+
+.price-table-footer P{
+  font-size: 40px;
+  font-weight: 500;
+  padding-left: 20px;
+}
+
+.price-table-footer button{
+  padding: 10px;
+  margin-left: 20px;
+  margin-bottom: 50px;
+}
+
+.price-tbl-gray{
+  background-image: url("Images/gray\ bg.jpg");
+  background-size: cover ;
+  background-position: center;
+}
+
+.price-tbl-red{
+  background-image: url("Images/red\ 2\ bg.jpg");
+  background-size: cover ;
+  background-position: center;
+}
+
+.price-top-space{
+  margin-top: 100px;
+  border-top: 3px solid red;
+  
+}
+
+.price-top-space-2{
+  margin-top: 138px;
+  border-top: 3px solid red;
+  
+}
+
+.price-top-space-3{
+  margin-top: 75px;
+  border-top: 3px solid red;
+  
+}
+
+.price-recommendation {
+  background-color: #0a1c57; 
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  padding: 8px 0;
+  position: absolute;
+  top: -40px; /* lift above box */
+  left: 0;
+  right: 0;
+  /* margin-top: 10px; */
+}
+
+.price-table > .row > .col > .box{
+   display: flex;
+  flex-direction: column;
+  height: 100%;
+}
