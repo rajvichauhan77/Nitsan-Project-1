@@ -103,3 +103,19 @@ const filterButtons = document.querySelectorAll('.btn-group .btn');
       });
     });
   });
+
+
+//   document.addEventListener("DOMContentLoaded", function () {
+//   // ✅ Only targets hero section hex grid
+//   var heroGrid = document.querySelector('.hex-grid');
+//   if(heroGrid){
+//     new Isotope(heroGrid, {
+//       itemSelector: '.hex-item',
+//       layoutMode: 'masonry',
+//       masonry: {
+//         fitWidth: true,
+//         gutter: 15
+//       }
+//     });
+//   }
+// });
