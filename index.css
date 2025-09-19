@@ -1032,3 +1032,79 @@ html, body {
 .logo-wall-text span{
   font-size: 18px;
 }
+
+
+.stage {
+  background-color: #0a1c57;
+  color: white;
+  position: relative; 
+}
+.stage-box p{
+   font-size: 60px; 
+   white-space: pre-line; 
+   line-height: 1; 
+   margin-left: 70px; 
+   font-weight: 500;
+   } 
+  
+   .stage-box span{ 
+    font-size: 28px; 
+    font-weight: 400; 
+  }
+
+.stage-img {
+  background-color: white;
+  color: black;
+  position: absolute;
+  /* width: 80%;  */
+  left: 50%;
+  transform: translateX(-50%); 
+  top: 80%; 
+}
+
+.stage-img img{
+  width: 800px;
+  height: 600px;
+}
+
+@media (max-width : 992px){
+    .stage-img img{
+    width: 500px;
+    height: 300px;
+}
+
+.stage-box p{
+   font-size: 50px; 
+   white-space: pre-line; 
+   line-height: 1; 
+   /* margin-left: 70px;  */
+   font-weight: 500;
+   } 
+  
+   .stage-box span{ 
+    font-size: 15px; 
+    font-weight: 400; 
+  }
+
+}
+
+@media (max-width : 576px){
+    .stage-img img{
+    width: 300px;
+    height: 200px;
+}
+
+.stage-box p{
+   font-size: 30px; 
+   /* white-space: pre-line;  */
+   line-height: 1; 
+   /* margin-left: 70px;  */
+   font-weight: 500;
+   } 
+  
+   .stage-box span{ 
+    font-size: 15px; 
+    font-weight: 400; 
+  }
+
+}
