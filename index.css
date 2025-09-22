@@ -17,8 +17,9 @@
   width: 35px;
  border-radius: 50%;
  }
-  .navbar-nav { 
+  .navbar-nav .nav-link{ 
     gap: 15px;
+    font-weight: 400;
    } 
 
   .navbar-collapse .navbar-nav .nav-item .nav-link { 
@@ -62,7 +63,7 @@
     left: 0; 
     width: 100%; 
     background-color: gainsboro; 
-    padding: 20px 50px; 
+    padding: 70px 100px; 
     box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
     z-index: 1000; 
     background-image: url("Images/mega-menu-img.jpg"); 
@@ -121,48 +122,56 @@
            background-repeat: no-repeat; 
           } 
     }
-          
-    @media (max-width: 991px) {    
-        #navbarSupportedContent {
-        position: relative; 
-        overflow: hidden; 
-      } 
-              
-     .navbar-nav { 
-        transition: transform 0.4s ease; 
-      } 
-      .mega-menu {
-         position: absolute; 
-         top: 0; 
-         right: -100%; 
-         width: 100%; 
-        height: 100%; 
-        transition: right 0.4s ease; 
-        background-image: url("Images/mega-menu-img.jpg"); 
-        background-size: cover; 
-        background-position: center; 
-        z-index: 1000;
-       } 
-       
-       .mega-menu.show {
-         right: 0; 
-         } 
-         
-     .navbar-nav.hide {
-         transform: translateX(-100%);   
-          } 
-          
-          .mega-menu-back { 
-            display: block; 
-            margin: 15px; 
-            padding: 8px 15px; 
-            background: #f44336; 
-            color: white; 
-            border: none; 
-            border-radius: 4px; 
-            font-size: 16px; 
-          } 
-    } 
+    
+
+  @media (max-width: 991px) {
+      #navbarSupportedContent {
+        position: relative;
+        overflow: hidden;
+      }
+
+  .navbar-nav {
+    transition: transform 0.4s ease;
+    z-index: 1; 
+  }
+
+  .navbar-nav.hide {
+    transform: translateX(-100%);
+  }
+
+  .mega-menu {
+    position: absolute;
+    top: 0;
+    left: 0;  
+    width: 100%;
+    height: 200vh;
+    padding: 25px;
+    background-image: url("Images/mega-menu-img.jpg");
+    background-size: cover;
+    background-position: center;
+    z-index: 10; 
+    transition: transform 0.4s ease;
+    transform: translateX(100%);
+  }
+
+  .mega-menu.show {
+    transform: translateX(0);
+  }
+
+  .mega-menu-back {
+    display: block;
+    margin: 15px;
+    padding: 8px 15px;
+    background: #f44336;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    z-index: 20; 
+    position: relative;
+  }
+}
+
     
     .mega-menu-col-bg-img {
        position: relative;
