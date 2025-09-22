@@ -1,5 +1,6 @@
 const navLinks = document.querySelectorAll('[data-menu]');
 const megaMenu = document.getElementById('megaMenu');
+
 let isMobile = window.matchMedia('(max-width: 991px)').matches;
 
 if (isMobile) {
@@ -44,6 +45,42 @@ if (isMobile) {
         megaMenu.style.display = 'none';
     });
 }
+
+const togglerBtn = document.querySelector('.navbar-toggler');
+const togglerIcon = togglerBtn.querySelector('.nav-tgl-btn');
+
+togglerBtn.addEventListener('click', function () {
+    const isExpanded = togglerBtn.classList.toggle('active'); 
+    if (isExpanded) {
+        togglerIcon.classList.remove('fa-align-right');
+        togglerIcon.classList.add('fa-xmark'); 
+    } else {
+        togglerIcon.classList.remove('fa-xmark');
+        togglerIcon.classList.add('fa-align-right'); 
+    }
+});
+
+if (isMobile) {
+    const navList = document.querySelector('.navbar-nav');
+    const backBtn = document.querySelector('.mega-menu-back');
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            
+            megaMenu.classList.add('show');
+            navList.classList.add('hide');
+        });
+    });
+
+    backBtn.addEventListener('click', () => {
+        
+        megaMenu.classList.remove('show');
+        navList.classList.remove('hide');
+    });
+}
+
+
 
 
 var swiper = new Swiper(".mySwiper", {
@@ -105,17 +142,3 @@ const filterButtons = document.querySelectorAll('.btn-group .btn');
   });
 
 
-//   document.addEventListener("DOMContentLoaded", function () {
-//   // ✅ Only targets hero section hex grid
-//   var heroGrid = document.querySelector('.hex-grid');
-//   if(heroGrid){
-//     new Isotope(heroGrid, {
-//       itemSelector: '.hex-item',
-//       layoutMode: 'masonry',
-//       masonry: {
-//         fitWidth: true,
-//         gutter: 15
-//       }
-//     });
-//   }
-// });
